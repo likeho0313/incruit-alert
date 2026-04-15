@@ -3,7 +3,7 @@ name: Job Alert Bot
 on:
   schedule:
     # 1시간마다 한 번씩 실행 (UTC 기준)
-    - cron: '0 * * * *'
+    - cron: '0/5 * * * *'
   # 필요할 때 수동으로 바로 실행할 수 있는 버튼을 만듭니다.
   workflow_dispatch:
 
