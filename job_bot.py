@@ -9,7 +9,7 @@ DISCORD_WEBHOOK_URL = os.getenv('DISCORD_WEBHOOK_URL')
 KEYWORDS = ["정규","전산","보안","개발"]
 CHECK_FILE = 'last_jobs.json'
 
-tag_ids = [518, 10566, 10101/10105]
+tag_ids = [518, 10566, 10101]
 tag_params = "&".join([f"tag_type_ids={tid}" for tid in tag_ids])
 # tag_type_ids 리스트 (참고용)
 # 개발 전체	518
