@@ -4,7 +4,8 @@ import os
 
 # 1. 설정
 # GitHub Secrets에 등록했다면 os.getenv를 사용하고, 로컬 테스트라면 문자열을 직접 넣으세요.
-DISCORD_WEBHOOK_URL = os.getenv('DISCORD_WEBHOOK_URL', 'https://discord.com/api/webhooks/1493827941841371156/jKY0kA7PSDw9Gj4fqh-7g3Isowoza2aIYs_j2ZSrsqcigFYnfoErdzX2zVEfxqako77A')
+# DISCORD_WEBHOOK_URL = os.getenv('DISCORD_WEBHOOK_URL', 'https://discord.com/api/webhooks/1493827941841371156/jKY0kA7PSDw9Gj4fqh-7g3Isowoza2aIYs_j2ZSrsqcigFYnfoErdzX2zVEfxqako77A')
+DISCORD_WEBHOOK_URL = os.getenv('DISCORD_WEBHOOK_URL')
 
 # 감시할 키워드 리스트 (여기에 원하는 키워드를 계속 추가하세요)
 KEYWORDS = ["파이썬", "Python", "백엔드", "Backend", "데이터 엔지니어", "신입"]
