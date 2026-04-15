@@ -9,6 +9,24 @@ DISCORD_WEBHOOK_URL = os.getenv('DISCORD_WEBHOOK_URL')
 KEYWORDS = ["정규","전산","보안","개발"]
 CHECK_FILE = 'last_jobs.json'
 
+tag_ids = [518, 10566, 10101/10105]
+tag_params = "&".join([f"tag_type_ids={tid}" for tid in tag_ids])
+# tag_type_ids 리스트 (참고용)
+# 개발 전체	518
+# 웹 개발자	873
+# 서버 개발자 (백엔드)	872
+# 프론트엔드 개발자	669
+# 자바 개발자	660
+# 파이썬 개발자	899
+# 안드로이드 개발자	677
+# iOS 개발자	678
+# 데이터 엔지니어	655
+# 머신러닝 엔지니어	1024
+# 인공지능 엔지니어	1025
+# 정보보호 10566
+# 교육 · 교직원 10101/10105
+
+
 def get_wanted_jobs(search_keyword):
     """원티드 API를 사용하여 공고를 가져옵니다."""
     # 키워드 인코딩
@@ -18,8 +36,8 @@ def get_wanted_jobs(search_keyword):
     url = (
         f"https://www.wanted.co.kr/api/v4/jobs?"
         f"country=kr&"
-        # f"tag_type_ids=518&"  # 개발 카테고리 (필요시 제거 가능)
-        f"locations=all&"
+        f"{tag_params}&"  # 생성된 태그 파라미터 삽입
+        f"locations=seoul.all&" # 서울만 seoul.all # 전국 all
         f"years=-1&"
         f"limit=20&"
         f"offset=0&"
