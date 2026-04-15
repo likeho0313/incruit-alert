@@ -6,7 +6,7 @@ import urllib.parse
 # 1. 설정
 DISCORD_WEBHOOK_URL = os.getenv('DISCORD_WEBHOOK_URL')
 # 테스트를 위해 범용적인 키워드 위주로 설정
-KEYWORDS = ["파이썬", "Python", "백엔드", "Backend", "신입"]
+KEYWORDS = ["정규","전산","보안","개발"]
 CHECK_FILE = 'last_jobs.json'
 
 def get_wanted_jobs(search_keyword):
@@ -18,7 +18,7 @@ def get_wanted_jobs(search_keyword):
     url = (
         f"https://www.wanted.co.kr/api/v4/jobs?"
         f"country=kr&"
-        f"tag_type_ids=518&"  # 개발 카테고리 (필요시 제거 가능)
+        # f"tag_type_ids=518&"  # 개발 카테고리 (필요시 제거 가능)
         f"locations=all&"
         f"years=-1&"
         f"limit=20&"
@@ -105,11 +105,11 @@ def main():
             if any(k.lower() in job_title.lower() for k in KEYWORDS):
                 send_discord_message(job, kw)
                 new_jobs_found.append(job_id)
-                # 너무 많은 알림 방지
-                if len(new_jobs_found) >= 10:
-                    break
-        if len(new_jobs_found) >= 10:
-            break
+        #         # 너무 많은 알림 방지 (디스코드 도배 방지?)
+        #         if len(new_jobs_found) >= 10:
+        #             break
+        # if len(new_jobs_found) >= 10:
+        #     break
 
     # 3. 새로운 ID 저장
     final_ids = list(set(sent_jobs + new_jobs_found))[-200:] # 최근 200개 유지
