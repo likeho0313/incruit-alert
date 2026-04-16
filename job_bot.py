@@ -6,7 +6,7 @@ import urllib.parse
 # 1. 설정
 DISCORD_WEBHOOK_URL = os.getenv('DISCORD_WEBHOOK_URL')
 # 테스트를 위해 범용적인 키워드 위주로 설정
-KEYWORDS = ["정규","전산","보안","개발"]
+KEYWORDS = ["정규","전산","보안","개발","의료원"]
 CHECK_FILE = 'last_jobs.json'
 
 tag_ids = [518, 10566, 10101]
