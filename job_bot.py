@@ -9,7 +9,7 @@ DISCORD_WEBHOOK_URL = os.getenv('DISCORD_WEBHOOK_URL')
 KEYWORDS = ["정규","전산","보안","개발","의료원"]
 CHECK_FILE = 'last_jobs.json'
 
-tag_ids = [518, 10566, 10101]
+tag_ids = [515, 518, 10566, 10101, 530, 959, 522, 532, 514]
 tag_params = "&".join([f"tag_type_ids={tid}" for tid in tag_ids])
 # tag_type_ids 리스트 (참고용)
 # 개발 전체	518
@@ -25,7 +25,12 @@ tag_params = "&".join([f"tag_type_ids={tid}" for tid in tag_ids])
 # 인공지능 엔지니어	1025
 # 정보보호 10566
 # 교육 · 교직원 10101/10105
-
+# 의료 515
+# 영업 530
+# 게임 959
+# 생산 522
+# 물류 532
+# 공공 514
 
 def get_wanted_jobs(search_keyword):
     """원티드 API를 사용하여 공고를 가져옵니다."""
