@@ -1,5 +1,5 @@
 """
-Wanted & Uman 채용 공고 멀티채널 자동 알림 봇 (Discord 2.0 + Telegram 지원)
+Wanted 채용 공고 멀티채널 자동 알림 봇 (Discord 2.0 + Telegram 지원)
 개선 사항:
 1. 뱃치 전송(Batching): 여러 공고가 한 번에 떠도 단 1회 웹훅 요청으로 묶어 429 Rate Limit 방지
 2. 제외 키워드(EXCLUDE_KEYWORDS): '경비', '주차' 등 원치 않는 무관 공고 필터링
@@ -94,12 +94,9 @@ def send_discord_batch(new_jobs: List[Dict[str, Any]]):
             embeds.append({
                 "title": f"🚀 새 채용 공고: {job_title}",
                 "description": (
-                    f"**🏢 회사:** {company}
-"
-                    f"**📍 지역:** {location}
-"
-                    f"**💰 보상금:** {reward}
-"
+                    f"**🏢 회사:** {company}\n"
+                    f"**📍 지역:** {location}\n"
+                    f"**💰 보상금:** {reward}\n"
                     f"**🔍 매칭 키워드:** `{keyword}`"
                 ),
                 "url": f"https://www.wanted.co.kr/wd/{job_id}",
