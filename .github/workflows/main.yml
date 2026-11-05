@@ -18,8 +18,13 @@ jobs:
 
     steps:
       # 1. 코드 가져오기 (Node 24 호환 actions/checkout@v4 최신 버전)
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10' # 사용하는 파이썬 버전
 
       # 2. 파이썬 설치 (Ubuntu 26.04 지원 Python 3.12 LTS + actions/setup-python@v5)
       - name: Set up Python 3.12
