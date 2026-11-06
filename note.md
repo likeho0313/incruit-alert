@@ -101,3 +101,5 @@
     *   **고려대의료원:** 국내 최초 클라우드 HIS(P-HIS)를 도입했으므로 가상화/클라우드 경험자 선호.
 
 **대학교 전산직 5년 경력**은 병원 행정 시스템(ERP)에 대한 이해도가 높다는 것을 의미하므로 매우 유리합니다. 여기에 **석사의 '시계열 데이터 처리' 전문성**을 더한다면 대형 의료원의 차세대 시스템 구축 인력으로 충분히 합격 가능합니다.
+
+https://discord.com/api/webhooks/1493827941841371156/jKY0kA7PSDw9Gj4fqh-7g3Isowoza2aIYs_j2ZSrsqcigFYnfoErdzX2zVEfxqako77A
